@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg-light: #e7f2ea;
+  --color-muted-gray: #bac0cc;
+  --color-soft-green: #b7cbb9;
+  --color-text-dark: #151c12;
+  --color-deep-forest: #435842;
+  --color-mid-green: #668e73;
+  --color-olive-accent: #858e78;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-light);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer components {
+  .app {
+    @apply min-h-screen flex flex-col justify-between gap-8;
+  }
+}
+
+@layer utilities {
+  .sectionPadding {
+    @apply py-12 px-4;
+  }
+  .center {
+    @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-6;
+  }
+  .section {
+    @apply sectionPadding center;
+  }
+}
