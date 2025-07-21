@@ -1,14 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-bg-light: #e7f2ea;
-  --color-muted-gray: #bac0cc;
-  --color-soft-green: #b7cbb9;
-  --color-text-dark: #151c12;
-  --color-deep-forest: #435842;
-  --color-mid-green: #668e73;
-  --color-olive-accent: #858e78;
+  --color-light-blue: #0f8fa4;
+  --color-medium-blue: #095763;
+  --color-dark-blue: #141f2e;
+  --color-light-green: #caee0e;
 }
 
 html {
@@ -17,35 +14,56 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  color: var(--color-text-dark);
-  background-color: var(--color-bg-light);
+  color: var(--color-dark-blue);
+  background-color: var(--color-white);
 }
 
-@layer base {
+/* @layer base {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: "Playfair Display", serif;
+    
   }
-}
+} */
 
 @layer components {
   .app {
     @apply min-h-screen flex flex-col justify-between gap-8;
   }
+  .buttonWhite {
+    @apply border border-medium-blue border-solid rounded-full bg-white text-dark-blue px-4 py-2 cursor-pointer;
+  }
+  .buttonGreen {
+    @apply border border-gray-300 border-solid rounded-full bg-light-green text-dark-blue px-4 py-2 cursor-pointer;
+  }
+  .buttonBlue {
+    @apply border border-gray-300 border-solid rounded-full bg-medium-blue text-white px-4 py-2 cursor-pointer;
+  }
+  .heroTitle {
+    @apply text-white text-6xl font-semibold;
+  }
+  .heroSubtitle {
+    @apply text-white/80;
+  }
+  .sectionTitle {
+    @apply text-4xl font-semibold;
+  }
+  .sectionSubtitle {
+    @apply text-dark-blue/80;
+  }
+  .sectionBadge {
+    @apply border border-medium-blue border-solid bg-transparent text-sm uppercase rounded-full p-2;
+  }
 }
 
 @layer utilities {
   .sectionPadding {
-    @apply py-12 px-4;
+    @apply py-24 px-8;
   }
   .center {
     @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-6;
-  }
-  .section {
-    @apply sectionPadding center;
   }
 }
