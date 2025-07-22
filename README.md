@@ -1,12 +1,30 @@
-# React + Vite
+## 🎯 Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Netgo** is a professional and modern cloud computing landing page built with **React**, styled using **Tailwind CSS**, and animated with **Framer Motion**. It's designed to showcase services for cloud infrastructure, SaaS platforms, and tech startups with high performance and responsiveness.
 
-Currently, two official plugins are available:
+## 💡 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ☁️ Hero section with engaging background and call-to-action
+- 🧩 Modular product and solution cards with interactive animations
+- 🌍 Modern grid-based layout with responsive design
+- 💼 Company info, resources, and contact sections
+- ✨ Scroll-based entrance animations for dynamic UX
+- ⚡ Built with Vite for fast development and hot module reloading
+- 🌐 Fully responsive using Tailwind CSS utilities
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 18** — UI Library
+- **Vite** — Modern frontend tooling
+- **React Router** — Client-side routing (if used)
+- **Tailwind CSS** — Utility-first CSS framework
+- **Framer Motion** — Animations and transitions
+- **Render.com** — Deployment platform
+
+## 🔗 Links
+
+- Live Site: https://netgo-site.onrender.com/
+
+## 📸 Screenshots
+
+![Home Page](./assets/screenshot.png)
