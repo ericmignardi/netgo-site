@@ -22,7 +22,7 @@
 
 ## 🔗 Links
 
-- Live Site: https://netgo-site.onrender.com/
+- Live Site: https://netgo-site.onrender.com
 
 ## 📸 Screenshots
 
