@@ -1,4 +1,5 @@
 import { FiCheck } from "react-icons/fi";
+import { motion } from "motion/react";
 
 const PricingCard = ({
   text,
@@ -8,9 +9,15 @@ const PricingCard = ({
   benefitOne,
   benefitTwo,
   benefitThree,
+  offset,
+  delay,
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{ x: offset, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut", delay: delay }}
+      viewport={{ once: true, amount: 0.3 }}
       className={`rounded-4xl p-8 ${background} flex flex-col justify-center gap-4`}
     >
       <h3 className={`text-xl font-semibold ${text}`}>Kubernetes Service</h3>
@@ -30,7 +37,7 @@ const PricingCard = ({
       <a className={`underline ${text}`} href="#">
         View pricing
       </a>
-    </div>
+    </motion.div>
   );
 };
 

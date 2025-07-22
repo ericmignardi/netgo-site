@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 const ProductsCard = ({
   icon: Icon,
   title,
@@ -5,9 +7,15 @@ const ProductsCard = ({
   titleText,
   subtitleText,
   background,
+  offset,
+  delay,
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{ x: offset, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: delay }}
+      viewport={{ once: true, amount: 0.3 }}
       className={`min-h-[300px] flex flex-col justify-between rounded-4xl ${background} p-8`}
     >
       <div className="flex flex-col gap-4">
@@ -27,7 +35,7 @@ const ProductsCard = ({
       >
         Explore the product
       </a>
-    </div>
+    </motion.div>
   );
 };
 

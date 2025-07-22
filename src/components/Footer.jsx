@@ -1,11 +1,23 @@
 import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
 import logo from "../assets/logoLight.svg";
+import { motion } from "motion/react";
 
 const Footer = () => {
   return (
-    <footer className="bg-medium-blue rounded-4xl m-4">
+    <motion.footer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+      className="bg-medium-blue rounded-4xl m-4"
+    >
       <div className="center sectionPadding grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 justify-center items-start text-center md:text-left gap-8">
-        <div className="flex flex-col gap-2">
+        <motion.div
+          initial={{ x: -10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.25, ease: "easeOut", delay: 0.25 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col gap-2"
+        >
           <span className="text-sm text-white">Company</span>
           <a className="text-xs text-white/50" href="#">
             About
@@ -22,8 +34,14 @@ const Footer = () => {
           <a className="text-xs text-white/50" href="#">
             Referral Program
           </a>
-        </div>
-        <div className="flex flex-col gap-2">
+        </motion.div>
+        <motion.div
+          initial={{ x: -10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.25, ease: "easeOut", delay: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col gap-2"
+        >
           <span className="text-sm text-white">Resources</span>
           <a className="text-xs text-white/50" href="#">
             Products Overview
@@ -43,8 +61,14 @@ const Footer = () => {
           <a className="text-xs text-white/50" href="#">
             API
           </a>
-        </div>
-        <div className="flex flex-col gap-2">
+        </motion.div>
+        <motion.div
+          initial={{ x: -10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.25, ease: "easeOut", delay: 0.75 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col gap-2"
+        >
           <span className="text-sm text-white">Community</span>
           <a className="text-xs text-white/50" href="#">
             Tutorials
@@ -64,8 +88,14 @@ const Footer = () => {
           <a className="text-xs text-white/50" href="#">
             Meetups
           </a>
-        </div>
-        <div className="flex flex-col gap-2">
+        </motion.div>
+        <motion.div
+          initial={{ x: -10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.25, ease: "easeOut", delay: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col gap-2"
+        >
           <span className="text-sm text-white">Solutions</span>
           <a className="text-xs text-white/50" href="#">
             Website Hosting
@@ -82,8 +112,14 @@ const Footer = () => {
           <a className="text-xs text-white/50" href="#">
             SaaS Platforms
           </a>
-        </div>
-        <div className="flex flex-col gap-2">
+        </motion.div>
+        <motion.div
+          initial={{ x: -10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.25, ease: "easeOut", delay: 1.25 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col gap-2"
+        >
           <span className="text-sm text-white">Contact</span>
           <a className="text-xs text-white/50" href="#">
             Support
@@ -97,10 +133,16 @@ const Footer = () => {
           <a className="text-xs text-white/50" href="#">
             Share your ideas
           </a>
-        </div>
+        </motion.div>
       </div>
-      <hr className="text-white/50" />
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 p-8">
+      <hr className="text-white/50 center" />
+      <motion.div
+        initial={{ y: 10, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="center flex flex-col md:flex-row justify-between items-center gap-4 p-8"
+      >
         <img className="max-w-30" src={logo} alt="No Worries brand logo" />
         <p className="text-xs text-white/50">
           &copy; {new Date().getFullYear()} No Worries Technology, LLC
@@ -116,8 +158,8 @@ const Footer = () => {
             <FiFacebook />
           </a>
         </div>
-      </div>
-    </footer>
+      </motion.div>
+    </motion.footer>
   );
 };
 
