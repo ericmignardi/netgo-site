@@ -27,4 +27,4 @@
 
 ## 📸 Screenshots
 
-![Home Page](./assets/screenshot.png)
+![Home Page](./src/assets/screenshot.png)
