@@ -114,6 +114,7 @@ const Pricing = () => {
               initial={{ x: -10, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
               className="text-medium-blue text-2xl font-semibold flex justify-center items-center gap-0"
             >
               <AiFillFacebook />
