@@ -16,7 +16,6 @@
 
 - **React 18** — UI Library
 - **Vite** — Modern frontend tooling
-- **React Router** — Client-side routing (if used)
 - **Tailwind CSS** — Utility-first CSS framework
 - **Framer Motion** — Animations and transitions
 - **Render.com** — Deployment platform
